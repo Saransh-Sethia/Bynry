@@ -1,0 +1,95 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fname": "Shakib",
+      "lname": "Al Hasan",
+      "email": "al@gmail.com",
+      "department": "All Rounder"
+    },
+    {
+      "id": 2,
+      "fname": "Mutthaih",
+      "lname": "Murlidharan",
+      "email": "murli@gmail.com",
+      "department": "Spin"
+    },
+    {
+      "id": 3,
+      "fname": "Chris",
+      "lname": "Crains",
+      "email": "chris@gmail.com",
+      "department": "Bowling"
+    },
+    {
+      "id": 4,
+      "fname": "Virat",
+      "lname": "Kohli",
+      "email": "virat@gamil.com",
+      "department": "Batting"
+    },
+    {
+      "id": 5,
+      "fname": "Faf",
+      "lname": "du Plasis",
+      "email": "faf@gmailcom",
+      "department": "Batting"
+    },
+    {
+      "id": 6,
+      "fname": "David",
+      "lname": "Miller",
+      "email": "milley@gmail.com",
+      "department": "Batting"
+    },
+    {
+      "id": 7,
+      "fname": "Ravindra",
+      "lname": "Jadeja",
+      "email": "jaddu@gmail.com",
+      "department": "All Rounder"
+    },
+    {
+      "id": 8,
+      "fname": "Steve ",
+      "lname": "Smith",
+      "email": "smith@gmail.com",
+      "department": "Batting"
+    },
+    {
+      "id": 9,
+      "fname": "Glenn",
+      "lname": "Maxwell",
+      "email": "glen@gmail.com",
+      "department": "All Rounder"
+    },
+    {
+      "fname": "Babar",
+      "lname": "Azam",
+      "email": "babar@gmail.com",
+      "department": "Batting",
+      "id": 10
+    },
+    {
+      "fname": "Chris ",
+      "lname": "Gayle",
+      "email": "chris@gmail.com",
+      "department": "All Rounder",
+      "id": 11
+    },
+    {
+      "fname": "Mohd.",
+      "lname": "Shami",
+      "email": "shami@gmail.com",
+      "department": "Bowling",
+      "id": 12
+    },
+    {
+      "fname": "Shubhman",
+      "lname": "Gill",
+      "email": "sara@gmail.com",
+      "department": "Batting",
+      "id": 13
+    }
+  ]
+}
