@@ -5,22 +5,22 @@ import { Button } from "@mui/material";
 
 const AddUser = ({formData, setFormData, handleSubmit}) => {
   return (
-    <Box>
+    <Box className="add-user">
       <TextField 
       required sx={{marginRight:'15px'}} 
       size='small' 
       id="outlined-required" 
-      label="First Name" 
-      value={formData.fname}
-      onChange={(e)=>setFormData({...formData, fname:e.target.value})}
+      label="Username" 
+      value={formData.username}
+      onChange={(e)=>setFormData({...formData, username:e.target.value})}
        />
       <TextField 
       required sx={{marginRight:'15px'}} 
       size='small' 
       id="outlined-required" 
-      label="Last Name" 
-      value={formData.lname}
-      onChange={(e)=>setFormData({...formData, lname:e.target.value})}
+      label="Name" 
+      value={formData.name}
+      onChange={(e)=>setFormData({...formData, name:e.target.value})}
        />
       <TextField 
       required sx={{marginRight:'15px'}} 
@@ -34,11 +34,11 @@ const AddUser = ({formData, setFormData, handleSubmit}) => {
       required sx={{marginRight:'15px'}} 
       size='small' 
       id="outlined-required" 
-      label="Department" 
-      value={formData.department}
-      onChange={(e)=>setFormData({...formData, department:e.target.value})}
+      label="City" 
+      value={formData.city}
+      onChange={(e)=>setFormData({...formData, city:e.target.value})}
        />
-      <Button variant='contained' color='success' onClick={handleSubmit}>Add</Button>
+      <Button variant='contained' sx={{backgroundColor:"#03136b", color:"#ffffff", fontSize:'14px'}} onClick={()=>handleSubmit()}>Add</Button>
     </Box>
   );
 };

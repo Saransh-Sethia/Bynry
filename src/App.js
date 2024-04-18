@@ -9,7 +9,7 @@ function App() {
     <div className="App">
 <Routes>
   <Route path='/' element={<TableContents />}></Route>
-  <Route path='/update/:id' element={<UserEdit />}></Route>
+  <Route path='/:id' element={<UserEdit />}></Route>
 </Routes>
     </div>
   );

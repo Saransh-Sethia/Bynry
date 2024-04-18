@@ -10,10 +10,10 @@ const UserEdit = () => {
   const { id } = useParams();
   const [updateData, setUpdateData] = useState({
     id: id,
-    fname: "",
-    lname: "",
+    username: "",
+    name: "",
     email: "",
-    department: "",
+    city: "",
   });
 
   const navigate = useNavigate();
@@ -28,11 +28,20 @@ const UserEdit = () => {
   };
 
   const handleSubmit = async () => {
-    const response = await axios.put(`${config.endpoint}/${id}`, updateData);
-    const result = response.data;
-    console.log(result);
-    alert("Data updated successfully");
-    navigate("/");
+    try {
+      if(updateData.username.length === 0 || updateData.name.length === 0 || updateData.email.length ===0 || updateData.city.length === 0){
+        alert("Kindly Fill all the details");
+        return;
+      }
+      const response = await axios.put(`${config.endpoint}/${id}`, updateData);
+      const result = response.data;
+      console.log('Updated Successfully',result);
+      alert("Data updated successfully");
+      navigate("/");
+    } catch(error){
+      console.log('error',error)
+    }
+
   };
 
   useEffect(() => {
@@ -58,10 +67,10 @@ const UserEdit = () => {
           sx={{ marginRight: "15px" }}
           size="small"
           id="outlined-required"
-          label="First Name"
-          value={updateData.fname}
+          label="Username"
+          value={updateData.username}
           onChange={(e) =>
-            setUpdateData({ ...updateData, fname: e.target.value })
+            setUpdateData({ ...updateData, username: e.target.value })
           }
         />
         <br />
@@ -71,10 +80,10 @@ const UserEdit = () => {
           sx={{ marginRight: "15px" }}
           size="small"
           id="outlined-required"
-          label="Last Name"
-          value={updateData.lname}
+          label="Name"
+          value={updateData.name}
           onChange={(e) =>
-            setUpdateData({ ...updateData, lname: e.target.value })
+            setUpdateData({ ...updateData, name: e.target.value })
           }
         />
         <br />
@@ -97,15 +106,15 @@ const UserEdit = () => {
           sx={{ marginRight: "15px" }}
           size="small"
           id="outlined-required"
-          label="Department"
+          label="City"
           value={updateData.department}
           onChange={(e) =>
-            setUpdateData({ ...updateData, department: e.target.value })
+            setUpdateData({ ...updateData, city: e.target.value })
           }
         />
         <br />
         <br />
-        <Button variant="contained" color="success" onClick={()=>handleSubmit()}>
+        <Button variant="contained" sx={{backgroundColor:'#020030'}} onClick={()=>handleSubmit()}>
           Update
         </Button>
       </Box>

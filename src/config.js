@@ -1,4 +1,4 @@
 const config = {
-    endpoint: "http://localhost:3000/users"
+    endpoint: "https://jsonplaceholder.typicode.com/users"
 }
 export default config;
