@@ -13,6 +13,16 @@
     background-color: rgb(2, 46, 2);
 }
 
+.Details-button{
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 25px 10px 25px;
+    border: 1px solid  rgb(15, 20, 92);
+    border-radius: 4px;
+    color: #34c4b0;
+    background-color: rgb(15, 20, 92);
+}
+
 .delete-button{
     text-decoration: none;
     font-weight: 600;
@@ -21,7 +31,10 @@
     border-radius: 4px;
     color: #ffffff;
     background-color: #4d0c03;
+    margin-right: 5px;
 }
+
+
 
 @media(max-width:'800px'){
     .secondary-buttons{

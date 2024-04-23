@@ -12,6 +12,7 @@ import { Link, useNavigate } from "react-router-dom";
 import AddUser from "../AddUser/AddUser";
 import "./TableContents.css";
 
+
 export default function TableContents() {
   const [users, setUsers] = useState([]);
   const navigate = useNavigate();
@@ -21,6 +22,7 @@ export default function TableContents() {
     email: "",
     city: "",
   });
+ 
 
   const performApi = async () => {
     const response = await axios.get(config.endpoint);
@@ -110,19 +112,29 @@ export default function TableContents() {
                   <Link
                     className="Edit-button"
                     to={`${user.id}`}
-                    variant="contained"
+                    variant="outlined"
                     color="primary"
                   >
                     Edit
                   </Link>
+                  
                   <Button
                     variant="contained"
-                    sx={{ backgroundColor: "#4d0c03" }}
+                    color="error"
                     className="delete-button"
                     onClick={() => performDelete(user.id)}
                   >
                     Delete
                   </Button>
+                  <Link
+                    className="Details-button"
+                    to={`${user.id}/details`}
+                    variant="outlined"
+                    color="secondary"
+                  >
+                    Details
+                  </Link>
+                  
                 </TableCell>
               </TableRow>
             ))}
